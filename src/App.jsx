@@ -1,22 +1,27 @@
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
 import Home from './pages/Home';
-import About from './pages/About';
+import LoginSignUp from './pages/LoginSignUp';
+import Appointments from './pages/Appointments';
+import Chat from './pages/Chat';
+import VideoCall from './pages/VideoCall';
+import Journal from './pages/Journal';
+import UserSettings from './pages/UserSettings';
 
-function App() {
-  return (
-  <BrowserRouter>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-      <Routes>
+const App = () => (
+<Router>
+    <Routes>
+      <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginSignUp />} />
+        <Route path="/appointments" element={<Appointments />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/video-call" element={<VideoCall />} />
+        <Route path="/journal" element={<Journal />} />
+        <Route path="/settings" element={<UserSettings />} />
+      </Route>
+    </Routes>
+  </Router>
+)
 
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
-  )
-
-}
-
-export default App
+export default App;
