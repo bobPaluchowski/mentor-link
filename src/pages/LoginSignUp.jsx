@@ -1,6 +1,6 @@
 import { supabase } from '../services/supabaseClient';
 import { useNavigate } from 'react-router-dom';
-import { Button, TextField } from '#mui/material';
+import { Button, TextField } from '@mui/material';
 
 const LoginSignUp = () => {
   const navigate = useNavigate();

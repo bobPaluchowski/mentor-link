@@ -1,5 +1,5 @@
-import {BottomNavigation, BottomNavigationAction } from '#mui/material';
-import { CalendarMonth, Chat, VideoCall, Journal } from '#mui/icons-material';
+import {BottomNavigation, BottomNavigationAction } from '@mui/material';
+import { CalendarMonth, Chat, VideoCall, Edit } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
@@ -7,7 +7,7 @@ const Footer = () => (
     <BottomNavigationAction label="Appointments" icon={<CalendarMonth />} component={Link} to="/appointments" />
     <BottomNavigationAction label="Chat" icon={<Chat />} component={Link} to="/chat" />
     <BottomNavigationAction label="Video Call" icon={<VideoCall />} component={Link} to="/video-call" />
-    <BottomNavigationAction label="Journal" icon={<Journal />} component={Link} to="/journal" />
+    <BottomNavigationAction label="Journal" icon={<Edit />} component={Link} to="/journal" />
   </BottomNavigation>
 );
 
