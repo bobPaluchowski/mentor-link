@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, TextField, Button, List, ListItem, ListItemText } from '@mui/material';
+import { Container, TextField, Button, List, ListItem, ListItemText, Typography } from '@mui/material';
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -14,6 +14,10 @@ const Chat = () => {
 
   return (
   <Container>
+
+      <Container sx={{ textAlign: 'center' }}>
+      <Typography variant="h2">Chat with your Mentor</Typography>
+      </Container>
       <List>
         {messages.map((message, index) => (
         <ListItem key={index}>

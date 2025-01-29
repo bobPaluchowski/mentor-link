@@ -22,6 +22,9 @@ const Appointments = () => {
 
   return (
     <Container>
+      <Container sx={{ textAlign: 'center' }}>
+      <Typography variant="h2">Your Appointments</Typography>
+      </Container>
       <Typography variant="h4" gutterBottom>Schedule an Appointment</Typography>
       <form onSubmit={handleSubmit}>
         <TextField
