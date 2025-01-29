@@ -7,7 +7,7 @@ const Journal = () => {
   return (
   <Container>
       <Container sx={{ textAlign: 'center' }}>
-      <Typography variant="h2">Journal</Typography>
+      <Typography variant="h3">Journal</Typography>
       </Container>
       <Typography variant="h4" gutterBottom>What are your thoughts?</Typography>
       <TextField fullWidth multiline

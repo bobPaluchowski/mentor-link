@@ -16,7 +16,7 @@ const Chat = () => {
   <Container>
 
       <Container sx={{ textAlign: 'center' }}>
-      <Typography variant="h2">Chat with your Mentor</Typography>
+      <Typography variant="h3">Chat with your Mentor</Typography>
       </Container>
       <List>
         {messages.map((message, index) => (

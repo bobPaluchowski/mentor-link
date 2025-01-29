@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TextField, Button, Container, Typography } from '@mui/material';
 import { DatePicker, TimePicker } from '@mui/x-date-pickers';
+import MentorList from '../components/MentorList.jsx';
 
 const Appointments = () => {
   const [title, setTitle] = useState('');
@@ -21,9 +22,10 @@ const Appointments = () => {
   };
 
   return (
+    <>
     <Container>
       <Container sx={{ textAlign: 'center' }}>
-      <Typography variant="h2">Your Appointments</Typography>
+      <Typography variant="h3">Appointments</Typography>
       </Container>
       <Typography variant="h4" gutterBottom>Schedule an Appointment</Typography>
       <form onSubmit={handleSubmit}>
@@ -60,6 +62,8 @@ const Appointments = () => {
         </Button>
       </form>
     </Container>
+    <MentorList />
+    </>
   );
 };
 
