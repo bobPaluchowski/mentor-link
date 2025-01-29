@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { TextField, Button, Container, Typography } from '@mui/material';
 import { DatePicker, TimePicker } from '@mui/x-date-pickers';
-import MentorList from '../components/MentorList.jsx';
 
 const Appointments = () => {
   const [title, setTitle] = useState('');
@@ -13,6 +12,24 @@ const Appointments = () => {
     e.preventDefault();
     // Handle form submission
     console.log({ title, date, time, comments });
+
+    if (!title.trim()) {
+      alert("Title/Reason is required");
+      return;
+    }
+    if (!date) {
+      alert("Please select the date");
+      return;
+    }
+    if (!time) {
+      alert("Please select the time");
+      return;
+    }
+    // Comment input can be empty, I think...
+    if (!comments.trim()) {
+      alert("Comments cannot be empty");
+      return;
+    }
 
     // Clear inputs after submission
     setTitle('');
@@ -62,7 +79,6 @@ const Appointments = () => {
         </Button>
       </form>
     </Container>
-    <MentorList />
     </>
   );
 };
